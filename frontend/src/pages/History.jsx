@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import api from '../api/client';
+import api, { getImageUrl } from '../api/client';
 import { useAuth } from '../context/AuthContext';
 import {
   History as HistoryIcon,
@@ -289,7 +289,7 @@ export default function History() {
 
                   {ans.image_url && (
                     <div className="max-w-xs mx-auto p-2 bg-slate-950 rounded-lg">
-                      <img src={ans.image_url} alt="Savol rasmi" className="max-h-32 object-contain mx-auto" />
+                      <img src={getImageUrl(ans.image_url)} alt="Savol rasmi" className="max-h-32 object-contain mx-auto" />
                     </div>
                   )}
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import api from '../api/client';
+import api, { getImageUrl } from '../api/client';
 import { useAuth } from '../context/AuthContext';
 import {
   Clock,
@@ -414,14 +414,14 @@ export default function Exam() {
           <div className="relative group max-w-md mx-auto">
             <div className="h-60 sm:h-72 w-full rounded-2xl bg-slate-900/90 border border-slate-800 p-4 flex items-center justify-center overflow-hidden">
               <img
-                src={currentQuestion.image_url}
+                src={getImageUrl(currentQuestion.image_url)}
                 alt="Yo'l belgisi yoki vaziyat"
                 className="max-h-full max-w-full object-contain cursor-zoom-in transition transform group-hover:scale-105 duration-200"
-                onClick={() => setEnlargedImage(currentQuestion.image_url)}
+                onClick={() => setEnlargedImage(getImageUrl(currentQuestion.image_url))}
               />
             </div>
             <button
-              onClick={() => setEnlargedImage(currentQuestion.image_url)}
+              onClick={() => setEnlargedImage(getImageUrl(currentQuestion.image_url))}
               className="absolute bottom-3 right-3 p-1.5 rounded-lg bg-slate-950/80 text-slate-300 hover:text-white border border-slate-700 opacity-80 group-hover:opacity-100 transition"
               title="Kattalashtirish"
             >

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
 import confetti from 'canvas-confetti';
+import { getImageUrl } from '../api/client';
 import {
   CheckCircle2,
   XCircle,
@@ -202,7 +203,7 @@ export default function ExamResult() {
                 {res.image_url && (
                   <div className="max-w-xs mx-auto p-2 bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center">
                     <img
-                      src={res.image_url}
+                      src={getImageUrl(res.image_url)}
                       alt="Savol tasviri"
                       className="max-h-40 object-contain"
                     />

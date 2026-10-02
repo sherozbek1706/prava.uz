@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import api from '../../api/client';
+import api, { getImageUrl } from '../../api/client';
 import { useAuth } from '../../context/AuthContext';
 import {
   FileQuestion,
@@ -103,7 +103,7 @@ export default function AdminQuestions() {
     setDescription(q.description || '');
     setCategory(q.category || 'Yo\'l belgilari');
     setImageFile(null);
-    setImagePreview(q.image_url || null);
+    setImagePreview(q.image_url ? getImageUrl(q.image_url) : null);
     setRemoveExistingImage(false);
 
     if (q.options && q.options.length > 0) {
@@ -390,7 +390,7 @@ export default function AdminQuestions() {
               {q.image_url && (
                 <div className="max-w-xs p-2 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center">
                   <img
-                    src={q.image_url}
+                    src={getImageUrl(q.image_url)}
                     alt="Savol rasmi"
                     className="max-h-36 object-contain rounded"
                   />

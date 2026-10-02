@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import api from '../../api/client';
+import api, { getImageUrl } from '../../api/client';
 import {
   Layers,
   Plus,
@@ -551,7 +551,7 @@ export default function AdminTests() {
                         <div className="flex items-start space-x-2">
                           {q.image_url ? (
                             <img
-                              src={q.image_url}
+                              src={getImageUrl(q.image_url)}
                               alt=""
                               className="w-8 h-8 rounded object-cover bg-slate-900 border border-slate-800 flex-shrink-0"
                             />

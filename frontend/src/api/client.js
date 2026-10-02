@@ -1,7 +1,18 @@
 import axios from 'axios';
 
+// Allows connecting to remote backend (e.g. on Vercel) or local proxy
+export const API_BASE_URL = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '');
+
+export const getImageUrl = (path) => {
+  if (!path) return '';
+  if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('blob:')) {
+    return path;
+  }
+  return `${API_BASE_URL}${path}`;
+};
+
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: API_BASE_URL ? `${API_BASE_URL}/api` : '/api',
   headers: {
     'Content-Type': 'application/json',
   },
@@ -24,7 +35,6 @@ api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response && error.response.status === 401) {
-      // If unauthorized, token might be invalid or expired
       const currentPath = window.location.pathname;
       if (!currentPath.includes('/login') && !currentPath.includes('/register') && currentPath !== '/') {
         localStorage.removeItem('token');
