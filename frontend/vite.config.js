@@ -21,4 +21,18 @@ export default defineConfig({
       },
     },
   },
+  preview: {
+    port: 3000,
+    host: '0.0.0.0',
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5050',
+        changeOrigin: true,
+      },
+      '/uploads': {
+        target: 'http://localhost:5050',
+        changeOrigin: true,
+      },
+    },
+  },
 });
