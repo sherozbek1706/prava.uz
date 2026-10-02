@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="400" height="400">
+  <circle cx="100" cy="100" r="92" fill="#FFFFFF" stroke="#D32F2F" stroke-width="20"/>
+  <!-- Red car (left) -->
+  <rect x="42" y="80" width="42" height="52" rx="8" fill="#D32F2F"/>
+  <rect x="48" y="90" width="30" height="22" rx="4" fill="#FFFFFF"/>
+  <!-- Black car (right) -->
+  <rect x="116" y="80" width="42" height="52" rx="8" fill="#212121"/>
+  <rect x="122" y="90" width="30" height="22" rx="4" fill="#FFFFFF"/>
+</svg>

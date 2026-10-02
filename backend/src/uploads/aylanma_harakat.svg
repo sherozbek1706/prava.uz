@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="400" height="400">
+  <circle cx="100" cy="100" r="92" fill="#1E88E5" stroke="#1565C0" stroke-width="4"/>
+  <!-- 3 curved circular arrows -->
+  <path d="M100,32 A68,68 0 0,1 160,135" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round"/>
+  <polygon points="172,130 152,148 162,118" fill="#FFFFFF"/>
+  <path d="M140,155 A68,68 0 0,1 42,125" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round"/>
+  <polygon points="36,132 46,108 58,135" fill="#FFFFFF"/>
+  <path d="M50,85 A68,68 0 0,1 125,36" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round"/>
+  <polygon points="120,24 140,42 112,48" fill="#FFFFFF"/>
+</svg>

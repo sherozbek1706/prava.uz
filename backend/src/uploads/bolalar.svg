@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="400" height="400">
+  <polygon points="100,15 190,175 10,175" fill="#FFFFFF" stroke="#D32F2F" stroke-width="18" stroke-linejoin="round"/>
+  <!-- Children silhouette running -->
+  <circle cx="85" cy="80" r="8" fill="#111"/>
+  <path d="M85 88 L85 118 L70 142 M85 118 L100 142 M75 102 L105 100" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="120" cy="95" r="6" fill="#111"/>
+  <path d="M120 101 L120 125 L110 145 M120 125 L132 145 M112 112 L132 110" stroke="#111" stroke-width="5" stroke-linecap="round"/>
+</svg>

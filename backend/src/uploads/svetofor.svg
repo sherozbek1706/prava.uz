@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="400" height="400">
+  <rect x="65" y="15" width="70" height="170" rx="18" fill="#263238" stroke="#37474F" stroke-width="4"/>
+  <!-- Red light glowing -->
+  <circle cx="100" cy="50" r="22" fill="#FF1744" stroke="#D50000" stroke-width="3"/>
+  <circle cx="95" cy="45" r="6" fill="#FFA4A2" opacity="0.6"/>
+  <!-- Yellow light dim -->
+  <circle cx="100" cy="100" r="22" fill="#5D4037" stroke="#3E2723" stroke-width="2"/>
+  <!-- Green light dim -->
+  <circle cx="100" cy="150" r="22" fill="#1B5E20" stroke="#004D40" stroke-width="2"/>
+</svg>
